@@ -1,0 +1,14 @@
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    background-color: black;
+    color: white;
+}
+
+.logo-footer{
+    height: 80px;
+    width: 200px;
+}

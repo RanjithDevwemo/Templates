@@ -1,0 +1,18 @@
+.logo{
+    height: 80px;
+    width: 200px;
+}
+.nav{
+    top: 0;
+    position:sticky;
+}
+.navbar{
+    position: relative;
+  left: 0px;
+  top: 0px;
+  z-index: 10;
+    width: 100%;
+}
+.con{
+    background-color: red;
+}

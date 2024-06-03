@@ -1,0 +1,27 @@
+.main-home{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.box-h1{
+    text-align: center;
+}
+.box{
+    height: 400px;
+    width: 280px;
+    /* background-color: red; */
+    border:2px solid black;
+    padding: 0.5em;
+   margin: 1em;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   
+}
+.img1{
+    height: 200px;
+    width: 200px;
+}
