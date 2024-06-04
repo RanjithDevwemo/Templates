@@ -2,11 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 import {IoIosQuote} from "react-icons/io";
 import {AiOutlineStar} from "react-icons/ai";
-
+import "../Css/cliendSlider.css"
 const ClientSlider = (props) => {
     const {name, position, img_url, stars, disc} = props.item;
   return (
-    <Container>
+    <div className="cliendSlider">
+    <Container className='con'>
         <Header>
             <span className='quote'><IoIosQuote/></span>
             <div>
@@ -28,6 +29,7 @@ const ClientSlider = (props) => {
             </div>
         </Footer>
     </Container>
+    </div>
   )
 }
 

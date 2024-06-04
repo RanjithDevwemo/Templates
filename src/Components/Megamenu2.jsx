@@ -1,46 +1,39 @@
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import Offcanvas from 'react-bootstrap/Offcanvas';
+import React from "react";
 import {
+  Nav,
+  Navbar,
+  NavDropdown,
   Col,
   Row,
+  Container,
   Dropdown,
 } from "react-bootstrap";
-import "../Css/Navbar.css"
-import Popup from './Popup';
-import logo from "../assets/Images/responsive-logo-tagline.png"
-// import Megamenu from './Megamenu';
+import { Link } from "react-router-dom";
 import "../Css/Mega1.css"
-function OffcanvasExample() {
+// import "./home.css";
+export function Megamenu1() {
   return (
-    <div className='nav'>
-      {[ 'lg'].map((expand) => (
-        <Navbar key={expand} expand={expand} className="bg-body-tertiary mb-3 navbar">
-          <Container fluid className='con'>
-            <Navbar.Brand href="#"><img src={logo} alt="Logo image" title='Logo image' className='logo' /></Navbar.Brand>
-            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
-            <Navbar.Offcanvas
-              id={`offcanvasNavbar-expand-${expand}`}
-              aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
-              placement="end"
-            >
-              <Offcanvas.Header closeButton>
-                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                  Offcanvas
-                </Offcanvas.Title>
-              </Offcanvas.Header>
-              <Offcanvas.Body>
-                <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link href="#action1">Home</Nav.Link>
-                  <Nav.Link href="#action2">Link</Nav.Link>
-                 
-                  <NavDropdown
+    <div>
+      <h1>Home page</h1>
+      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Container>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="me-auto">
+              <Nav.Link href="#pricing">shoes</Nav.Link>
+              <Nav.Link href="#features">handbags</Nav.Link>
+              <Nav.Link href="#pricing">jewelry & accessaories</Nav.Link>
+              <Nav.Link href="#pricing">men</Nav.Link>
+              <Nav.Link href="#pricing">kids</Nav.Link>
+              <Nav.Link href="#pricing">home</Nav.Link>
+              <Nav.Link href="#pricing">sale</Nav.Link>
+
+
+
+
+              <NavDropdown
                 // className="pr-2 py-2 align-text-top"
-                title="MegaMenu"
+                title="women"
                 id="basic-nav-dropdown"
               >
                 <Container className="eventsNav pt-0 mt-0">
@@ -48,18 +41,18 @@ function OffcanvasExample() {
                     <Col xs="12" md="4" className="text-left">
                       <Dropdown.Header>Catering</Dropdown.Header>
                       <Dropdown.Item>
-                        <span>
+                        <Link href="/">
                           <a className="nav-link" role="button">
                             Corporate
                           </a>
-                        </span>
+                        </Link>
                       </Dropdown.Item>
                       <Dropdown.Item>
-                        <span>
+                        <Link href="/">
                           <a className="nav-link" role="button">
                             Private
                           </a>
-                        </span>
+                        </Link>
                       </Dropdown.Item>
                       <Dropdown.Divider />
                       <Dropdown.Header>
@@ -73,25 +66,25 @@ function OffcanvasExample() {
                         Classes
                       </Dropdown.Header>
                       <Dropdown.Item>
-                        <span>
+                        <Link href="/">
                           <a className="nav-link" role="button">
                             Barista 101
                           </a>
-                        </span>
+                        </Link>
                       </Dropdown.Item>
                       <Dropdown.Item>
-                        <span>
+                        <Link href="/">
                           <a className="nav-link" role="button">
                             History of Coffee
                           </a>
-                        </span>
+                        </Link>
                       </Dropdown.Item>
                       <Dropdown.Item>
-                        <span>
+                        <Link href="/">
                           <a className="nav-link" role="button">
                             Intro to Cafe Snobbery
                           </a>
-                        </span>
+                        </Link>
                       </Dropdown.Item>
                       <Dropdown.Divider className="d-md-none" />
                     </Col>
@@ -108,18 +101,18 @@ function OffcanvasExample() {
                         Rentals
                       </Dropdown.Header>
                       <Dropdown.Item>
-                        <span>
+                        <Link href="/">
                           <a className="nav-link" role="button">
                             Fireside Room
                           </a>
-                        </span>
+                        </Link>
                       </Dropdown.Item>
                       <Dropdown.Item>
-                        <span>
+                        <Link href="/">
                           <a className="nav-link" role="button">
                             Roasting Room
                           </a>
-                        </span>
+                        </Link>
                       </Dropdown.Item>
                       <Dropdown.Divider />
                       <Dropdown.Header>
@@ -133,21 +126,20 @@ function OffcanvasExample() {
                         Seasonal
                       </Dropdown.Header>
                       <Dropdown.Item>
-                        <span>
+                        <Link href="/">
                           <a className="nav-link" role="button">
                             Coldbrew Night
                           </a>
-                        </span>
+                        </Link>
                       </Dropdown.Item>
                       <Dropdown.Item>
-                        <span>
+                        <Link href="/">
                           <a className="nav-link text-wrap" role="button">
                             Campfire Coffee Class
                           </a>
-                        </span>
+                        </Link>
                       </Dropdown.Item>
                     </Col>
-                    
                     <Col xs="12" md="4" className="text-left">
                       <Dropdown.Header>
                         {/* <FontAwesomeIcon
@@ -160,18 +152,18 @@ function OffcanvasExample() {
                         Rentals
                       </Dropdown.Header>
                       <Dropdown.Item>
-                        <span>
+                        <Link href="/">
                           <a className="nav-link" role="button">
                             Fireside Room
                           </a>
-                        </span>
+                        </Link>
                       </Dropdown.Item>
                       <Dropdown.Item>
-                        <span>
+                        <Link href="/">
                           <a className="nav-link" role="button">
                             Roasting Room
                           </a>
-                        </span>
+                        </Link>
                       </Dropdown.Item>
                       <Dropdown.Divider />
                       <Dropdown.Header>
@@ -185,45 +177,34 @@ function OffcanvasExample() {
                         Seasonal
                       </Dropdown.Header>
                       <Dropdown.Item>
-                        <span>
+                        <Link href="/">
                           <a className="nav-link" role="button">
                             Coldbrew Night
                           </a>
-                        </span>
+                        </Link>
                       </Dropdown.Item>
                       <Dropdown.Item>
-                        <span>
+                        <Link href="/">
                           <a className="nav-link text-wrap" role="button">
                             Campfire Coffee Class
                           </a>
-                        </span>
+                        </Link>
                       </Dropdown.Item>
                     </Col>
                   </Row>
                 </Container>
               </NavDropdown>
               
-
-                  {/* <Megamenu/> */}
-                </Nav>
-                <Form className="d-flex">
-                  <Form.Control
-                    type="search"
-                    placeholder="Search"
-                    className="me-2"
-                    aria-label="Search"
-                  />
-                  <Button variant="outline-success">Search</Button>
-                  <Popup/>
-                </Form>
-              </Offcanvas.Body>
-            </Navbar.Offcanvas>
-          </Container>
-         
-        </Navbar>
-      ))}
+            </Nav>
+            <Nav>
+              <Nav.Link href="#deets">More deets</Nav.Link>
+              <Nav.Link eventKey={2} href="#memes">
+                Dank memes
+              </Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
     </div>
   );
 }
-
-export default OffcanvasExample;

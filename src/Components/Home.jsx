@@ -17,7 +17,21 @@ const data=[
         img:"/Images/banner3.jpg",
         heading:"Product Engineering",
         value:"We function as an end-to-end product engineering partner and handle diverse aspects of the product lifecycle such as ideation & design, prototyping, full product development, launch, and scaling."
-    }
+    },
+    {
+      img:"/Images/banner1.jpg",
+      heading:"Digital Transformation",
+      value:"With world-class industry and technical expertise, Flyers Soft helps you to unlock maximum value across technology, data, and operations to accelerate your unique digital transformation."
+  },
+   {
+      img:"/Images/banner2.jpg",
+      heading:"Application Development",
+      value:"Our application services integrate middleware  database, automation, maintenance, infrastructure and application transformation, as well as end-to-end seamless DevOps Processes."
+  }, {
+      img:"/Images/banner3.jpg",
+      heading:"Product Engineering",
+      value:"We function as an end-to-end product engineering partner and handle diverse aspects of the product lifecycle such as ideation & design, prototyping, full product development, launch, and scaling."
+  }
 ]
 export default function Home() {
   return (
@@ -33,7 +47,7 @@ export default function Home() {
                    
                       {/* <div className="box-1"> */}
                         <img src={val.img} alt="" className='img1' />
-                        <p>{val.value}</p>
+                        <p className='box-p'>{val.value}</p>
                       </div>
                     // </div>
                 ))
