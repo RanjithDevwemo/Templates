@@ -1,10 +1,9 @@
 .nav-link {
     font-size: 0.95rem;
-
   }
   .text-left{
     background-color: aqua;
-   
+    max-width: 20rem;
   }
   .eventsNav{
     /* background-color: black; */

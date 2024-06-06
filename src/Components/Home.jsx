@@ -1,4 +1,5 @@
 import React from 'react'
+
 // import img1 from "../assets/Images/banner-half-circle.png"
 // import img1 from "../assets/Images/template/"
 // import img2 from "../assets/Images/banner-title-icon.png"
@@ -35,7 +36,7 @@ const data=[
 ]
 export default function Home() {
   return (
-    <div className="">
+    <div className="home">
       <h1 className='box-h1'>Cart Design (Home)</h1>
     <div className='main-home'>
      

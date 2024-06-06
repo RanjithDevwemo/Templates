@@ -1,22 +1,7 @@
-.mega-con{
-    display: inline;
-    text-align: center;
-}
-.main-megamenu{
-   max-width: 100px;
-}
-.maga-row{
-   /* max-width:; */
-   max-width: 10rem;
-    background-color: rgb(128, 255, 0);
-}
-.pad{
-background-color: red;
-}
-.content{
-    /* padding: 160px; */
-    background-color:black;
-}
-.mega-content{
-    background-color: black;
-}
+/* .container{
+    min-width: 100%;
+    /* background-color: aqua; */
+/* }
+
+
+  

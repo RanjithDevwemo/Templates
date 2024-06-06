@@ -1,0 +1,133 @@
+/* Slider.css
+
+.slider {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 800px; /* Adjust max-width as needed */
+    /* margin: 0 auto;
+    position: relative;
+  }
+  
+  .slides-container {
+    overflow: hidden;
+    flex-grow: 1;
+  }
+  
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .slide {
+    flex: 0 0 33.33%; /* Display three slides in one row */
+    /* padding: 0 10px;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+  }
+  
+  .slide.active {
+    opacity: 1;
+  }
+  
+  .slide-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .slide-details {
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+  }
+  
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 20px;
+    z-index: 2;
+  }
+  
+  .left {
+    left: 0;
+  }
+  
+  .right {
+    right: 0;
+  } */
+   
+  /* Slider.css */
+
+  /* Slider.css */
+
+
+
+  /* Slider.css */
+
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Adjust max-width as needed */
+    margin: 0 auto;
+    overflow: hidden;
+    
+  }
+  
+  .slides-container {
+    overflow: hidden;
+    /* margin: 1em; */
+   
+  }
+  
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease;
+    /* margin: 11em; */
+  }
+  
+  .slide {
+    border: 2px solid black;
+    margin-left: 1em;
+    flex: 0 0 33.33%; /* Display three slides in one row */
+  }
+  
+  .slide-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .slide-details {
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+  }
+  
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 20px;
+    z-index: 2;
+  }
+  
+  .left {
+    left: 0;
+  }
+  
+  .right {
+    right: 0;
+  }
+  

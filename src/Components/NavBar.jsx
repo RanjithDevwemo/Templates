@@ -18,15 +18,22 @@ import "../Css/Mega1.css"
 function OffcanvasExample() {
   return (
     <div className='nav'>
+      
       {[ 'lg'].map((expand) => (
-        <Navbar key={expand} expand={expand} className="bg-body-tertiary mb-3 navbar">
+ 
+        <Navbar key={expand} expand={expand} className="bg-body-tertiary mb-3 nav-main">
+          <div className="navbar">
           <Container fluid className='con'>
+           
+           
             <Navbar.Brand href="#"><img src={logo} alt="Logo image" title='Logo image' className='logo' /></Navbar.Brand>
-            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
+           
+            <div className="offcan"> <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} /></div>
+            
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
-              placement="end"
+              placement="end" 
             >
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
@@ -219,8 +226,9 @@ function OffcanvasExample() {
               </Offcanvas.Body>
             </Navbar.Offcanvas>
           </Container>
-         
+          </div>
         </Navbar>
+       
       ))}
     </div>
   );

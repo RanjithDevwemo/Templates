@@ -1,5 +1,5 @@
 import Accordion from 'react-bootstrap/Accordion';
-
+import "../Css/FAQ.css"
 
 const Faq=[
     {
@@ -22,11 +22,12 @@ function FAQ() {
   return (
     <div className="Faq-main">
         <h1 style={{textAlign:"center"}}>FAQ Values</h1>
-    <Accordion>
+    <Accordion className='faq-con'>
 {
     Faq.map((val,i)=>(
       <Accordion.Item eventKey={val.i} key={i}> 
-        <Accordion.Header>{val.header}</Accordion.Header>
+      <div className='faq-header'>
+        <Accordion.Header >{val.header}</Accordion.Header></div>
         <Accordion.Body>
          {val.para}
         </Accordion.Body>

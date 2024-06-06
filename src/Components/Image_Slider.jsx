@@ -1,4 +1,5 @@
 import React from 'react'
+// import "../Css/Image_Slider.css"
 import "../Css/Image_Slider.css"
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
@@ -22,6 +23,7 @@ export default function Image_Slider() {
 
   return (
       <div className="swiper">
+       
                 <Slider {...settings}>
                     <div className="swiper-slide">
                         <img src={ban1} className='banner banner1' alt='banner1'/>

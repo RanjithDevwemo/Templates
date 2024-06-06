@@ -1,12 +1,31 @@
+.ImageWithContainer{
+    /* height: 100vh; */
+    width: 100%;
+    /* margin-top: 25em; */
+}
 .container{
     display: flex;
+
         width: 100%;
     align-items: center;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
+    justify-content: center;
 
     flex-wrap: wrap;
 }
-
+.p-con{
+    font-family: serif;
+    font-size: 20px;
+    text-align: center;
+}
+.-h2{
+    text-align: center;
+    font-size: 30px;
+    /* font-family: serif; */
+    
+font-family:  Verdana, sans-serif;
+    font-weight: bolder;
+}
 .imgbox{
     height: 400px;
     width: 500px;
@@ -16,4 +35,24 @@
     align-items: center;
     justify-content: center;
     width: 50%;
+}
+.img-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 1200px) {
+    .p-con{
+        font-family: serif;
+        text-align: center;
+    } 
+    .imgbox{
+        height: 20em;
+        width: 20em;
+    }
+    body{
+        font-size: 1em;
+
+    }
 }
