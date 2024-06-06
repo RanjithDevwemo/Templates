@@ -5,6 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+
 import {
   Col,
   Row,
@@ -15,6 +16,7 @@ import Popup from './Popup';
 import logo from "../assets/Images/responsive-logo-tagline.png"
 // import Megamenu from './Megamenu';
 import "../Css/Mega1.css"
+import { Link } from 'react-router-dom';
 function OffcanvasExample() {
   return (
     <div className='nav'>
@@ -42,8 +44,8 @@ function OffcanvasExample() {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link href="#action1">Home</Nav.Link>
-                  <Nav.Link href="#action2">Link</Nav.Link>
+                  <Nav.Link href=""><Link to="/" className='li'>Home</Link></Nav.Link>
+                  <Nav.Link href="#action2"><Link to="/link" className='li'>Link</Link></Nav.Link>
                  
                   <NavDropdown
                 // className="pr-2 py-2 align-text-top"

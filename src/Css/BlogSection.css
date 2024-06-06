@@ -20,7 +20,7 @@
     /* height: 90vh; */
     width: 50%;
    position: relative;
-   z-index: -1;
+   /* z-index: -1; */
    margin-right: 4em;
    text-align: center;
    display: flex;

@@ -1,55 +1,47 @@
 import React from 'react'
 
-import Image_Slider from './Image_Slider'
-
-import ImageWithContent from './ImageWithContent'
-import TapSection from './TapSection'
-import Services from './Services'
-import ScrollCounding from './ScrollCounding'
-import BlogSection from './BlogSection'
-import FAQ from './FAQ'
-import ContactForm from './ContactForm'
-import FooterCurve from './Footer'
+import { FaAtom ,FaAppStoreIos,FaBrave, FaArchway,FaApple,FaCentos  } from "react-icons/fa6";
 
 // import ImageWithContent from "./ImageWithContent"
 
 // import img1 from "../assets/Images/banner-half-circle.png"
 // import img1 from "../assets/Images/template/"
 // import img2 from "../assets/Images/banner-title-icon.png"
-import "../Css/Home.css"
+// import "../Css/Home.css"
+import "../Css/Card.css"
 const data=[
     {
-        img:"/Images/banner1.jpg",
-        heading:"Digital Transformation",
+        icon:<FaApple/>,
+        heading:"Web Design",
         value:"With world-class industry and technical expertise, Flyers Soft helps you to unlock maximum value across technology, data, and operations to accelerate your unique digital transformation."
     },
      {
-        img:"/Images/banner2.jpg",
+        icon:<FaAppStoreIos />,
         heading:"Application Development",
         value:"Our application services integrate middleware  database, automation, maintenance, infrastructure and application transformation, as well as end-to-end seamless DevOps Processes."
     }, {
-        img:"/Images/banner3.jpg",
+        icon:<FaArchway />,
         heading:"Product Engineering",
         value:"We function as an end-to-end product engineering partner and handle diverse aspects of the product lifecycle such as ideation & design, prototyping, full product development, launch, and scaling."
     },
     {
-      img:"/Images/banner1.jpg",
+      icon:<FaAtom />,
       heading:"Digital Transformation",
       value:"With world-class industry and technical expertise, Flyers Soft helps you to unlock maximum value across technology, data, and operations to accelerate your unique digital transformation."
   },
    {
-      img:"/Images/banner2.jpg",
+      icon:<FaBrave />,
       heading:"Application Development",
       value:"Our application services integrate middleware  database, automation, maintenance, infrastructure and application transformation, as well as end-to-end seamless DevOps Processes."
   }, {
-      img:"/Images/banner3.jpg",
+      icon:<FaCentos />,
       heading:"Product Engineering",
       value:"We function as an end-to-end product engineering partner and handle diverse aspects of the product lifecycle such as ideation & design, prototyping, full product development, launch, and scaling."
   }
 ]
-export default function Home() {
+export default function Card1() {
   return (
-    <div className="allcomponent">
+
     <div className="home">
       <h1 className='box-h1'>Cart Design (Home)</h1>
     <div className='main-home'>
@@ -61,7 +53,7 @@ export default function Home() {
                       <h1 className='box-h1'>{val.heading}</h1>
                    
                       {/* <div className="box-1"> */}
-                        <img src={val.img} alt="" className='img1' />
+                        <div  className='img1'>{val.icon}</div>
                         <p className='box-p'>{val.value}</p>
                       </div>
                     // </div>
@@ -69,16 +61,6 @@ export default function Home() {
             }
           
 </div>
-</div>
-<Image_Slider/>
-     <ImageWithContent/>
-     <TapSection/>
-     <Services/>
-<ScrollCounding/>
-<BlogSection/>
-<FAQ/>
-<ContactForm/>
-<FooterCurve/>
 </div>
   )
 }

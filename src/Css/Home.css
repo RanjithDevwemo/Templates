@@ -1,6 +1,6 @@
 .home{
  position: relative;
- z-index: -1;
+ /* z-index: -1; */
  display: flex;
  align-items: center;
  justify-content: center;
@@ -56,5 +56,5 @@ font-family:  Verdana, sans-serif;
 .img1{
     height: 200px;
     width: 200px;
-    background-color: aqua;
+    /* background-color: aqua; */
 }
