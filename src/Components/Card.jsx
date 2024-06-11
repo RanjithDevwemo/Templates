@@ -9,6 +9,10 @@ import { FaAtom ,FaAppStoreIos,FaBrave, FaArchway,FaApple,FaCentos  } from "reac
 // import img2 from "../assets/Images/banner-title-icon.png"
 // import "../Css/Home.css"
 import "../Css/Card.css"
+import FadeAnimation from './FadeAnimation';
+// import Cliends from './CliendsSay';
+import ImageScroll from './BrandsSliders';
+import AboutUs from './AboutUs';
 const data=[
     {
         icon:<FaApple/>,
@@ -41,7 +45,7 @@ const data=[
 ]
 export default function Card1() {
   return (
-
+<div className="card1">
     <div className="home">
       <h1 className='box-h1'>Cart Design (Home)</h1>
     <div className='main-home'>
@@ -61,6 +65,12 @@ export default function Card1() {
             }
           
 </div>
+</div>
+
+<FadeAnimation/>
+<ImageScroll/>
+{/* <Cliends/> */}
+<AboutUs/>
 </div>
   )
 }

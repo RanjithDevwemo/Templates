@@ -1,244 +1,132 @@
-// import React from "react";
-// import {
- 
-//   NavDropdown,
-//   Col,
-//   Row,
-//   Container,
-//   Dropdown,
-// } from "react-bootstrap";
-// // import { Link } from "react-router-dom";
-// // import "./home.css";
-// // import "../Css/Megamenu.css"
-// import "../Css/Megamenu.css"
-// export function Megamenu() {
-//   return (
-  
-  
-     
+import React from 'react';
+import {
+  MDBContainer,
+  MDBCol,
+  MDBNavbar,
+  MDBNavbarNav,
+  MDBNavbarItem,
+  MDBNavbarLink,
+  MDBDropdown,
+  MDBDropdownToggle,
+  MDBDropdownMenu,
+  MDBListGroup,
+  MDBListGroupItem,
+  MDBRow,
+} from 'mdb-react-ui-kit';
+import "../Css/Megamenu.css"
+import { Link } from 'react-router-dom';
 
+export default function Mega() {
+  return (
+    <div className="main-con">
+          <MDBNavbar expand='lg'  className='main'>
+      <MDBContainer fluid>
+        <MDBNavbarNav className='me-auto ps-lg-0' style={{ paddingLeft: '0.15rem' }}>
+          <MDBNavbarItem>
+            <MDBNavbarLink active aria-current='page' href='#'>
+              Regular link
+            </MDBNavbarLink>
+          </MDBNavbarItem>
 
-//               <NavDropdown
-//                 // className="pr-2 py-2 align-text-top"
-//                 className="drop"
-//                 title="women"
-              
-//               >
-//                 <Container className="container">
-//                   <Row className="row">
-//                     <Col  className="col">
-//                       <Dropdown.Header>Catering</Dropdown.Header>
-//                       <Dropdown.Item>
-//                         <div className="NavLink">
-//                           <a className="nav-link" role="button">
-//                             Corporate
-//                           </a>
-//                         </div>
-//                       </Dropdown.Item>
-//                       <Dropdown.Item>
-//                         <div className="NavLink">
-//                           <a className="nav-link" role="button">
-//                             Private
-//                           </a>
-//                         </div>
-//                       </Dropdown.Item>
-//                       <Dropdown.Divider />
-//                       <Dropdown.Header>
-//                         {/* <FontAwesomeIcon
-//                           color="black"
-//                           icon={"chalkboard-teacher"}
-//                           size="1x"
-//                           className="pr-1"
-//                         /> */}
-//                         {"  "}
-//                         Classes
-//                       </Dropdown.Header>
-//                       <Dropdown.Item>
-//                         <div className="NavLink">
-//                           <a className="nav-link" role="button">
-//                             Barista 101
-//                           </a>
-//                         </div>
-//                       </Dropdown.Item>
-//                       <Dropdown.Item>
-//                         <div className="NavLink">
-//                           <a className="nav-link" role="button">
-//                             History of Coffee
-//                           </a>
-//                         </div>
-//                       </Dropdown.Item>
-//                       <Dropdown.Item>
-//                         <div className="NavLink">
-//                           <a className="nav-link" role="button">
-//                             Intro to Cafe Snobbery
-//                           </a>
-//                         </div>
-//                       </Dropdown.Item>
-//                       <Dropdown.Divider />
-//                     </Col>
+          <MDBNavbarItem className='position-static'>
+            <MDBDropdown className='container'>
+              <MDBDropdownToggle tag='a' className='Mega-menu-box'>
+                Mega menu
+              </MDBDropdownToggle>
+              <MDBDropdownMenu
+                className='drop-down' 
+                style={{
+                  borderTopLeftRadius: '0',
+                  borderTopRightRadius: '0',
+                }} 
+              >
+                <MDBContainer className='c'>
+                  <MDBRow className='my-4 row'>
+                    <MDBCol md='6' lg='3' className='mb-3 mb-lg-0'>
+                      <MDBListGroup flush>
+                        <MDBListGroupItem tag='a' href='#' action>
+                        <Link to="/">  Lorem ipsum </Link>
+                        </MDBListGroupItem>
+                        <MDBListGroupItem tag='a' href='#' action>
+                          Dolor sit
+                        </MDBListGroupItem>
+                        <MDBListGroupItem tag='a' href='#' action>
+                          Amet consectetur
+                        </MDBListGroupItem>
+                        <MDBListGroupItem tag='a' href='#' action>
+                          Cras justo odio
+                        </MDBListGroupItem>
+                        <MDBListGroupItem tag='a' href='#' action>
+                          Adipisicing elit
+                        </MDBListGroupItem>
+                      </MDBListGroup>
+                    </MDBCol>
+                    <MDBCol md='6' lg='3' className='mb-3 mb-lg-0'>
+                      <MDBListGroup flush>
+                        <MDBListGroupItem tag='a' href='#' action>
+                          Explicabo voluptas
+                        </MDBListGroupItem>
+                        <MDBListGroupItem tag='a' href='#' action>
+                          Perspiciatis quo
+                        </MDBListGroupItem>
+                        <MDBListGroupItem tag='a' href='#' action>
+                          Cras justo odio
+                        </MDBListGroupItem>
+                        <MDBListGroupItem tag='a' href='#' action>
+                          Laudantium maiores
+                        </MDBListGroupItem>
+                        <MDBListGroupItem tag='a' href='#' action>
+                          Provident dolor
+                        </MDBListGroupItem>
+                      </MDBListGroup>
+                    </MDBCol>
+                    <MDBCol md='6' lg='3' className='mb-3 mb-md-0'>
+                      <MDBListGroup flush>
+                        <MDBListGroupItem tag='a' href='#' action>
+                          Iste quaerato
+                        </MDBListGroupItem>
+                        <MDBListGroupItem tag='a' href='#' action>
+                          Cras justo odio
+                        </MDBListGroupItem>
+                        <MDBListGroupItem tag='a' href='#' action>
+                          Est iure
+                        </MDBListGroupItem>
+                        <MDBListGroupItem tag='a' href='#' action>
+                          Praesentium
+                        </MDBListGroupItem>
+                        <MDBListGroupItem tag='a' href='#' action>
+                          Laboriosam
+                        </MDBListGroupItem>
+                      </MDBListGroup>
+                    </MDBCol>
+                    <MDBCol md='6' lg='3'>
+                      <MDBListGroup flush>
+                        <MDBListGroupItem tag='a' href='#' action>
+                          Cras justo odio
+                        </MDBListGroupItem>
+                        <MDBListGroupItem tag='a' href='#' action>
+                          Saepe
+                        </MDBListGroupItem>
+                        <MDBListGroupItem tag='a' href='#' action>
+                          Vel alias
+                        </MDBListGroupItem>
+                        <MDBListGroupItem tag='a' href='#' action>
+                          Sunt doloribus
+                        </MDBListGroupItem>
+                        <MDBListGroupItem tag='a' href='#' action>
+                          Cum dolores
+                        </MDBListGroupItem>
+                      </MDBListGroup>
+                    </MDBCol>
+                  </MDBRow>
+                </MDBContainer>
+              </MDBDropdownMenu>
+            </MDBDropdown>
+          </MDBNavbarItem>
+        </MDBNavbarNav>
+      </MDBContainer>
+    </MDBNavbar>
+    </div>
 
-//                     <Col className="col" >
-//                       <Dropdown.Header>
-//                         {/* <FontAwesomeIcon
-//                           color="black"
-//                           icon={"building"}
-//                           size="1x"
-//                           className="pr-1"
-//                         /> */}
-//                         {"  "}
-//                         Rentals
-//                       </Dropdown.Header>
-//                       <Dropdown.Item>
-//                         <div className="NavLink">
-//                           <a className="nav-link" role="button">
-//                             Fireside
-//                           </a>
-//                         </div>
-//                       </Dropdown.Item>
-//                       <Dropdown.Item>
-//                         <div className="NavLink">
-//                           <a className="nav-link" role="button">
-//                             Roasting
-//                           </a>
-//                         </div>
-//                       </Dropdown.Item>
-//                       <Dropdown.Divider />
-//                       <Dropdown.Header>
-//                         {/* <FontAwesomeIcon
-//                           color="black"
-//                           icon={"sun"}
-//                           size="1x"
-//                           className="pr-1"
-//                         /> */}
-//                         {"  "}
-//                         Seasonal
-//                       </Dropdown.Header>
-//                       <Dropdown.Item>
-//                         <div className="NavLink">
-//                           <a className="nav-link" role="button">
-//                             Coldbrew 
-//                           </a>
-//                         </div>
-//                       </Dropdown.Item>
-//                       <Dropdown.Item>
-//                         <div className="NavLink">
-//                           <a className="nav-link " role="button">
-//                             Campfire Coffee Class
-//                           </a>
-//                         </div>
-//                       </Dropdown.Item>
-//                     </Col>
-//                     <Col className="col">
-//                       <Dropdown.Header>
-//                         {/* <FontAwesomeIcon
-//                           color="black"
-//                           icon={"building"}
-//                           size="1x"
-//                           className="pr-1"
-//                         /> */}
-//                         {"  "}
-//                         Rentals
-//                       </Dropdown.Header>
-//                       <Dropdown.Item>
-//                         <div className="NavLink">
-//                           <a className="nav-link" role="button">
-//                             Fireside Room
-//                           </a>
-//                         </div>
-//                       </Dropdown.Item>
-//                       <Dropdown.Item>
-//                         <div className="NavLink">
-//                           <a className="nav-link" role="button">
-//                             Roasting Room
-//                           </a>
-//                         </div>
-//                       </Dropdown.Item>
-//                       <Dropdown.Divider />
-//                       <Dropdown.Header>
-//                         {/* <FontAwesomeIcon
-//                           color="black"
-//                           icon={"sun"}
-//                           size="1x"
-//                           className="pr-1"
-//                         /> */}
-//                         {"  "}
-//                         Seasonal
-//                       </Dropdown.Header>
-//                       <Dropdown.Item>
-//                         <div className="NavLink">
-//                           <a className="nav-link" role="button">
-//                             Coldbrew Night
-//                           </a>
-//                         </div>
-//                       </Dropdown.Item>
-//                       <Dropdown.Item>
-//                         <div className="NavLink">
-//                           <a className="nav-link text-wrap" role="button">
-//                             Campfire Coffee Class
-//                           </a>
-//                         </div>
-//                       </Dropdown.Item>
-//                     </Col>
-//                   </Row>
-//                 </Container>
-//               </NavDropdown>
-//   );
-// }
-
-
-// import React, { useState } from 'react';
-// // import './Menu.css'; // Assuming you have a CSS file for styling
-
-// const Megamenu = () => {
-//   const [isOpen, setIsOpen] = useState(false);
-
-//   const toggleMenu = () => {
-//     setIsOpen(!isOpen);
-//   };
-
-//   return (
-//     <nav className="navbar">
-//       <div className="navbar-brand">
-//         <img src="logo.png" alt="Logo" className="logo" />
-//         <button className="menu-toggle" onClick={toggleMenu}>
-//           <span className="menu-icon"></span>
-//         </button>
-//       </div>
-//       <ul className={`menu ${isOpen ? 'open' : ''}`}>
-//         <li><a href="#">Home</a></li>
-//         <li><a href="#">About</a></li>
-//         <li><a href="#">Services</a></li>
-//         <li className="mega-menu">
-//           <a href="#">Mega Menu</a>
-//           <div className="mega-menu-content">
-//             <div className="row">
-//               <div className="column">
-//                 <ul>
-//                   <li><a href="#">Link 1</a></li>
-//                   <li><a href="#">Link 2</a></li>
-//                   <li><a href="#">Link 3</a></li>
-//                 </ul>
-//               </div>
-//               <div className="column">
-//                 <ul>
-//                   <li><a href="#">Link 4</a></li>
-//                   <li><a href="#">Link 5</a></li>
-//                   <li><a href="#">Link 6</a></li>
-//                 </ul>
-//               </div>
-//               <div className="column">
-//                 <ul>
-//                   <li><a href="#">Link 7</a></li>
-//                   <li><a href="#">Link 8</a></li>
-//                   <li><a href="#">Link 9</a></li>
-//                 </ul>
-//               </div>
-//             </div>
-//           </div>
-//         </li>
-//       </ul>
-//     </nav>
-//   );
-// };
-
-// export default Megamenu;
+  );
+}

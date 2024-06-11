@@ -1,0 +1,65 @@
+.flyerhome-sec1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.banner-title-icon{
+    height: 30px;
+    width: 30px;
+    /* padding: 10em; */
+}
+
+.fade-fix{
+    /* margin: 0px 10px; */
+    position: fixed;
+    margin-left: -11em;
+}
+
+.fade-h{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    gap: 2em;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 4em;
+}
+
+.fade-in {
+    opacity: 1;
+    animation: fadeIn 1s ease-in;
+    /* margin-left: 0.5em; */
+    text-align: left;
+  }
+  
+  .fade-out {
+    opacity: 0;
+    /* margin-left: 1em; */
+  
+    animation: fadeOut 1s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  
+
+  .flyer-btn{
+    background: radial-gradient(circle at 10% 20%, rgba(147,71,230,255) 0%, rgba(112,68,221,255)90%);
+    font-size: 1.2rem;
+    font-weight: bolder;
+    padding: none;
+    border-radius: 5px;
+   height: 2.5em;
+    margin: 2em 0em;
+
+  }

@@ -1,0 +1,20 @@
+.con2{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.sub2 {
+   display: flex;
+   height: 250rem;
+   width: 25rem;
+}
+.img1{
+    height: 100%;
+    width: 100%;
+}
+
+.slider{
+    width: 50%;
+    /* background-color: aqua; */
+}

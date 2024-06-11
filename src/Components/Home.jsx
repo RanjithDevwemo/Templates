@@ -17,6 +17,7 @@ import FooterCurve from './Footer'
 // import img1 from "../assets/Images/template/"
 // import img2 from "../assets/Images/banner-title-icon.png"
 import "../Css/Home.css"
+import ImageScroll from './BrandsSliders'
 const data=[
     {
         img:"/Images/banner1.jpg",
@@ -50,6 +51,7 @@ const data=[
 export default function Home() {
   return (
     <div className="allcomponent">
+      <Image_Slider/>
     <div className="home">
       <h1 className='box-h1'>Cart Design (Home)</h1>
     <div className='main-home'>
@@ -70,11 +72,12 @@ export default function Home() {
           
 </div>
 </div>
-<Image_Slider/>
+
      <ImageWithContent/>
      <TapSection/>
      <Services/>
 <ScrollCounding/>
+<ImageScroll/>
 <BlogSection/>
 <FAQ/>
 <ContactForm/>

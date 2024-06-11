@@ -4,6 +4,9 @@ body{
     padding:0;
     position: relative;
 }
+.mdbcon{
+    background-color: aqua;
+}
 .logo{
     height: 50px;
     width: 180px;
@@ -30,11 +33,32 @@ body{
     width: 100%; 
     background-color:  rgb(246, 240, 240);
 }
-.con{
-    top: 0;
+/*  */
+
+.Mega-menu{
+    width: 100%;
+    margin-bottom: 20em;
     /* background-color: red; */
 }
-
+.drop{
+    background-color: aqua;
+    width: 30em;
+}
+.drop-menu{
+    color: red;
+}
+.eventsNav{
+    background-color: red;
+    
+}
+/* .row{
+    background-color: rgb(159, 51, 51);
+    width: 200em;
+} */
+.row1{
+    background-color: black;
+    width: 200em;
+}
 
 @media only screen and (max-width: 601px) {
     .logo{
@@ -45,9 +69,28 @@ body{
     .nav-main{
         width: 100%;
     }
+    h1{
+        font-size: 1.8em;
+    }
+    h2{
+        font-size: 1.8em;
+    }
     .nav{
         width: 100%;
     }
  
 
 }
+
+ @media only screen and (min-width: 992px){
+
+    .drop{
+        display: flex;
+        position: absolute;
+        /* width: 100%; */
+         background-color: rgb(4, 21, 6);
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+} 

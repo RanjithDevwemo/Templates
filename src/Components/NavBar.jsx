@@ -5,7 +5,18 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import {
+  MDBContainer,
+  MDBCol,
+  MDBNavbarItem,
 
+  MDBDropdown,
+  MDBDropdownToggle,
+  MDBDropdownMenu,
+  MDBListGroup,
+  MDBListGroupItem,
+  MDBRow,
+} from 'mdb-react-ui-kit';
 import {
   Col,
   Row,
@@ -15,9 +26,20 @@ import "../Css/Navbar.css"
 import Popup from './Popup';
 import logo from "../assets/Images/responsive-logo-tagline.png"
 // import Megamenu from './Megamenu';
+
 import "../Css/Mega1.css"
 import { Link } from 'react-router-dom';
+// import { useState } from 'react';
+
 function OffcanvasExample() {
+  // const[open,setopen]=useState(false);
+  function Click(){
+   
+    <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
+    
+  }
+
+
   return (
     <div className='nav'>
       
@@ -30,8 +52,10 @@ function OffcanvasExample() {
            
             <Navbar.Brand href="#"><img src={logo} alt="Logo image" title='Logo image' className='logo' /></Navbar.Brand>
            
-            <div className="offcan"> <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} /></div>
+            <div className="offcan">
+               <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} /></div>
             
+
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
@@ -44,17 +68,122 @@ function OffcanvasExample() {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link href=""><Link to="/" className='li'>Home</Link></Nav.Link>
+                  <Nav.Link href="" ><Link to="/" className='li' >Home</Link></Nav.Link>
                   <Nav.Link href="#action2"><Link to="/link" className='li'>Link</Link></Nav.Link>
+                  <Nav.Link href="#action2"><Link to="/blog" className='li'>Blog</Link></Nav.Link>
                  
+
+
+
+                  <MDBNavbarItem className='position-static'>
+            <MDBDropdown>
+              <MDBDropdownToggle tag='a' className='Mega-menu'>
+                Mega menu
+              </MDBDropdownToggle>
+              <MDBDropdownMenu
+                className='drop'
+                style={{
+                  borderTopLeftRadius: '0',
+                  borderTopRightRadius: '0',
+                }} 
+              >
+                <MDBContainer className='mdbcon'>
+                  <MDBRow className='my-4'>
+                    <MDBCol md='6' lg='3' className='mb-3 mb-lg-0'>
+                      <MDBListGroup flush>
+                        <MDBListGroupItem tag='a' href='#' action>
+                        <Link to="/" className='li' onClick={Click}>Lorem ipsum</Link>
+                        </MDBListGroupItem>
+                        <MDBListGroupItem tag='a' href='#' action>
+                        <Link to="/career" className='li' onClick={Click}>Career</Link>
+
+                        </MDBListGroupItem>
+                        <MDBListGroupItem tag='a' href='#' action>
+                        <Link to="/FlyerHome" className='li' onClick={Click}>FlyerHome</Link>
+
+                        </MDBListGroupItem>
+                        <MDBListGroupItem tag='a' href='#' action>
+                          Cras justo odio
+                        </MDBListGroupItem>
+                        <MDBListGroupItem tag='a' href='#' action>
+                          Adipisicing elit
+                        </MDBListGroupItem>
+                      </MDBListGroup>
+                    </MDBCol>
+                    <MDBCol md='6' lg='3' className='mb-3 mb-lg-0'>
+                      <MDBListGroup flush>
+                        <MDBListGroupItem tag='a' href='#' action>
+                          Explicabo voluptas
+                        </MDBListGroupItem>
+                        <MDBListGroupItem tag='a' href='#' action>
+                          Perspiciatis quo
+                        </MDBListGroupItem>
+                        <MDBListGroupItem tag='a' href='#' action>
+                          Cras justo odio
+                        </MDBListGroupItem>
+                        <MDBListGroupItem tag='a' href='#' action>
+                          Laudantium maiores
+                        </MDBListGroupItem>
+                        <MDBListGroupItem tag='a' href='#' action>
+                          Provident dolor
+                        </MDBListGroupItem>
+                      </MDBListGroup>
+                    </MDBCol>
+                    <MDBCol md='6' lg='3' className='mb-3 mb-md-0'>
+                      <MDBListGroup flush>
+                        <MDBListGroupItem tag='a' href='#' action>
+                          Iste quaerato
+                        </MDBListGroupItem>
+                        <MDBListGroupItem tag='a' href='#' action>
+                          Cras justo odio
+                        </MDBListGroupItem>
+                        <MDBListGroupItem tag='a' href='#' action>
+                          Est iure
+                        </MDBListGroupItem>
+                        <MDBListGroupItem tag='a' href='#' action>
+                          Praesentium
+                        </MDBListGroupItem>
+                        <MDBListGroupItem tag='a' href='#' action>
+                          Laboriosam
+                        </MDBListGroupItem>
+                      </MDBListGroup>
+                    </MDBCol>
+                    <MDBCol md='6' lg='3'>
+                      <MDBListGroup flush>
+                        <MDBListGroupItem tag='a' href='#' action>
+                          Cras justo odio
+                        </MDBListGroupItem>
+                        <MDBListGroupItem tag='a' href='#' action>
+                          Saepe
+                        </MDBListGroupItem>
+                        <MDBListGroupItem tag='a' href='#' action>
+                          Vel alias
+                        </MDBListGroupItem>
+                        <MDBListGroupItem tag='a' href='#' action>
+                          Sunt doloribus
+                        </MDBListGroupItem>
+                        <MDBListGroupItem tag='a' href='#' action>
+                          Cum dolores
+                        </MDBListGroupItem>
+                      </MDBListGroup>
+                    </MDBCol>
+                  </MDBRow>
+                </MDBContainer>
+              </MDBDropdownMenu>
+            </MDBDropdown>
+          </MDBNavbarItem>
+
+
+
                   <NavDropdown
                 // className="pr-2 py-2 align-text-top"
                 title="MegaMenu"
-                id="basic-nav-dropdown"
+                id="basic-nav-dropdown" className='megamenu'
               >
-                <Container className="eventsNav pt-0 mt-0">
-                  <Row>
-                    <Col xs="12" md="4" className="text-left">
+                <Container className="eventsNav ">
+                  <div className="row">
+                  <Row className='row1'>
+                    <Col>
                       <Dropdown.Header>Catering</Dropdown.Header>
                       <Dropdown.Item>
                         <span>
@@ -102,10 +231,10 @@ function OffcanvasExample() {
                           </a>
                         </span>
                       </Dropdown.Item>
-                      <Dropdown.Divider className="d-md-none" />
+                      <Dropdown.Divider />
                     </Col>
 
-                    <Col xs="12" md="4" className="text-left">
+                    <Col >
                       <Dropdown.Header>
                         {/* <FontAwesomeIcon
                           color="black"
@@ -157,7 +286,7 @@ function OffcanvasExample() {
                       </Dropdown.Item>
                     </Col>
                     
-                    <Col xs="12" md="4" className="text-left">
+                    <Col >
                       <Dropdown.Header>
                         {/* <FontAwesomeIcon
                           color="black"
@@ -209,6 +338,7 @@ function OffcanvasExample() {
                       </Dropdown.Item>
                     </Col>
                   </Row>
+                  </div>
                 </Container>
               </NavDropdown>
               
@@ -229,6 +359,10 @@ function OffcanvasExample() {
             </Navbar.Offcanvas>
           </Container>
           </div>
+          <span style={{transform:`translateX(${100-100}%)`}} 
+          className='absolute bg-yellow-400 h-1 w-full bottom-0'/>
+
+          
         </Navbar>
        
       ))}
