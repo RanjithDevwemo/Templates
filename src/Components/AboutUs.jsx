@@ -13,21 +13,21 @@ export default function AboutUs() {
         value:" Our software as a Service (SaaS) solutions offer scalable and customizable applications that can be accessed from anywhere, anytime, enabling businesses to streamline processes, increase productivity, and reduce costs."
     }, {
         icon:<FaGitAlt className='icon'/>,
-        heading:"Saas Solutions",
-        value:" Our software as a Service (SaaS) solutions offer scalable and customizable applications that can be accessed from anywhere, anytime, enabling businesses to streamline processes, increase productivity, and reduce costs."
+        heading:"Functional Testing",
+        value:" Our experienced QA testing team implements functional testing to majorly focus on user interface, database, security, API's, client or server application and similar functionalities of the application."
     }, {
         icon:<FaGitlab className='icon'/>,
-        heading:"Saas Solutions",
-        value:" Our software as a Service (SaaS) solutions offer scalable and customizable applications that can be accessed from anywhere, anytime, enabling businesses to streamline processes, increase productivity, and reduce costs."
+        heading:"Performance Testing",
+        value:" Our profound experience in performance testing by executing quality checks and software behavior analysis under load and stress guarantees flawless, reliable and smarter applications."
     },
     {
         icon:<FaGem className='icon'/>,
-        heading:"Saas Solutions",
-        value:" Our software as a Service (SaaS) solutions offer scalable and customizable applications that can be accessed from anywhere, anytime, enabling businesses to streamline processes, increase productivity, and reduce costs."
+        heading:"Security Testing",
+        value:" Our QA testing services are performed by a talented pool of test engineers who execute risk assessment and penetration testing to shield applications from hackers or malicious threats."
     }, {
         icon:<FaGitlab className='icon'/>,
-        heading:"Saas Solutions",
-        value:" Our software as a Service (SaaS) solutions offer scalable and customizable applications that can be accessed from anywhere, anytime, enabling businesses to streamline processes, increase productivity, and reduce costs."
+        heading:"Usability Testing",
+        value:" Our software testing services entail an in-depth analysis of user behavior patterns that identify potential usability issues in the initial phase and create a seamless product."
     },
     {
         icon:<FaGem className='icon'/>,
@@ -49,9 +49,7 @@ export default function AboutUs() {
 <p className='about-p'>{data.value}</p>
         </div>
         ))
-}
-      
-        
+}        
         
         </div>
     </div>

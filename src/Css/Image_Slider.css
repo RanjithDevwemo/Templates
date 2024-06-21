@@ -1,3 +1,8 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
 .banner{
     position: relative;
     height: 400px;
@@ -6,7 +11,7 @@
 .swiper{
     /* position: relative; */
 
-   max-width: 100%;
+   max-width: 100vw;
    /* height: 100vh; */
    z-index: 1;
    position: relative;

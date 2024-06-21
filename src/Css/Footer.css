@@ -6,9 +6,23 @@
     flex-wrap: wrap;
     background-color: black;
     color: white;
+    padding: 2em;
 }
+.address{
+    text-align: center;
 
+}
 .logo-footer{
     height: 80px;
     width: 200px;
+}
+.copy{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+.f-h1{
+    text-align: center;
 }

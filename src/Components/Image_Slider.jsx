@@ -24,9 +24,10 @@ export default function Image_Slider() {
   return (
       <div className="swiper">
        
-                <Slider {...settings}>
+                <Slider {...settings} className='slider'>
                     <div className="swiper-slide">
                         <img src={ban1} className='banner banner1' alt='banner1'/>
+<h1>Hello world</h1>
                     </div>
                     <div className="swiper-slide">
                         <img src={ban2} className='banner banner2' alt='banner2'/>

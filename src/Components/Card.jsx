@@ -11,7 +11,7 @@ import { FaAtom ,FaAppStoreIos,FaBrave, FaArchway,FaApple,FaCentos  } from "reac
 import "../Css/Card.css"
 import FadeAnimation from './FadeAnimation';
 // import Cliends from './CliendsSay';
-import ImageScroll from './BrandsSliders';
+
 import AboutUs from './AboutUs';
 const data=[
     {
@@ -68,8 +68,8 @@ export default function Card1() {
 </div>
 
 <FadeAnimation/>
-<ImageScroll/>
-{/* <Cliends/> */}
+
+
 <AboutUs/>
 </div>
   )

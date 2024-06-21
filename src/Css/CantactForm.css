@@ -1,73 +1,69 @@
-/* src/ContactForm.css */
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    padding: 1em;
-    margin-bottom: 2em;
-  }
-  
-  .con-heading{
-    text-align: center;
-  }
-
-  .form-group {
-    margin-bottom: 1rem;
-  }
-  
-  .form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-  }
-  
-  .form-group input,
-  .form-group textarea {
-    width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  button {
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 4px;
-    background-color: #007bff;
-    color: #fff;
-    font-size: 1rem;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  @media (max-width: 600px) {
-    .contact-form {
-      padding: 1rem;
-    }
-  
-    button {
-      width: 100%;
-    }
-  }
-  .map-con{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-.map{
-  height: 400px;
-  width: 550px;
+.contact{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.con-heading{
+  text-align: center;
+}
+.form-group{
+  display: flex;
+ 
+  align-items: center;
+  justify-content: center;
+ gap: 2em;
+}
+input{
+  padding: 0.5em;
+  row-gap: 3em;
+}
+.con-sub1{
+  /* display: flex; */
+  width: 40rem;
 }
 
-  @media only screen and (max-width: 624px) {
-   .map{
-    height: 400px;
-   }
 
-  }
+.contact-con1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-sub2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+ul li{
+  list-style: none;
+}
+.contact-con2{
+  
+  padding: 7rem;
+  text-align: center;
+  background: radial-gradient(circle at 0.7% 2.7%,rgba(115,46,209,255) 0%, rgba(33,16,77,255));
+color: white;
+}
+.contact-con1{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* padding: 10%; */
+  /* flex-direction: column; */
+}
+
+.message{
+  width: 27em;
+}
+.contact-btn{
+width: 7em;
+border: none;
+background: radial-gradient(circle at 0.7% 2.7%,rgba(115,46,209,255) 0%, rgba(33,16,77,255));
+color: white;
+font-weight: bold;
+font-size: larger;
+border-radius: 5px;
+
+}

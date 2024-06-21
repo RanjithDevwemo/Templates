@@ -10,10 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.3.3",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
+    "@mdbootstrap/react-testimonial-slider": "^1.0.0",
     "@mui/icons-material": "^5.15.19",
     "@mui/material": "^5.15.19",
     "@mui/x-date-pickers": "^7.6.1",
@@ -21,6 +23,7 @@
     "bootstrap": "^5.3.3",
     "date-fns": "^3.6.0",
     "dayjs": "^1.11.11",
+    "emailjs": "^4.0.3",
     "mdb-react-ui-kit": "^8.0.0",
     "mdbreact": "^5.2.0",
     "react": "^18.2.0",

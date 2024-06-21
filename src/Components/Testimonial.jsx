@@ -1,172 +1,94 @@
-// import React, { useState, useEffect } from 'react';
-// // import './Slider.css'; // Assuming you have a CSS file for styling
-// import "../Css/Testimonial.css"
-
-// const members = [
-//   {
-//     id: 1,
-//     name: "John Doe",
-//     position: "Developer",
-//     image: "member1.jpg"
-//   },
-//   {
-//     id: 2,
-//     name: "Jane Smith",
-//     position: "Designer",
-//     image: "member2.jpg"
-//   },
-//   {
-//     id: 3,
-//     name: "Mark Johnson",
-//     position: "Manager",
-//     image: "member3.jpg"
-//   },
-//   {
-//     id: 4,
-//     name: "Emily Brown",
-//     position: "Marketing",
-//     image: "member4.jpg"
-//   },
-//   {
-//     id: 5,
-//     name: "Michael Clark",
-//     position: "Engineer",
-//     image: "member5.jpg"
-//   },
-//   {
-//     id: 6,
-//     name: "Sarah Wilson",
-//     position: "Analyst",
-//     image: "member6.jpg"
-//   },
-// ];
-
-// const Testimonials = () => {
-//   const [currentSlide, setCurrentSlide] = useState(0);
-
-//   useEffect(() => {
-//     const interval = setInterval(() => {
-//       setCurrentSlide(prevSlide => (prevSlide + 1) % members.length);
-//     }, 5000); // Change slide duration (milliseconds)
-    
-//     return () => clearInterval(interval);
-//   }, []);
-
-//   const nextSlide = () => {
-//     setCurrentSlide(prevSlide => (prevSlide + 1) % members.length);
-//   };
-
-//   const prevSlide = () => {
-//     setCurrentSlide(prevSlide => (prevSlide - 1 + members.length) % members.length);
-//   };
-
-//   return (
-//     <div className="slider">
-//       <button className="arrow left" onClick={prevSlide}>{'<'}</button>
-//       <div className="slides-container">
-//         <div className="slides" style={{ transform: `translateX(-${currentSlide * 33.33}%)` }}>
-//           {members.map(member => (
-//             <div className="slide" key={member.id}>
-//               <img src={member.image} alt={member.name} className="slide-image" />
-//               <div className="slide-details">
-//                 <p className="slide-name">{member.name}</p>
-//                 <p className="slide-position">{member.position}</p>
-//               </div>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//       <button className="arrow right" onClick={nextSlide}>{'>'}</button>
-//     </div>
-//   );
-// };
-
-// export default Testimonials;
-
-
-
-import React, { useState, useEffect } from 'react';
-// import './Slider.css'; // Assuming you have a CSS file for styling
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import Rating from '@mui/material/Rating';
 import "../Css/Testimonial.css"
-import { BsArrowLeft, BsArrowRight } from 'react-icons/bs'; // Assuming you have arrow icons imported
 
-const members = [
-  {
-    id: 1,
-    name: "John Doe",
-    position: "Developer",
-    image: "member1.jpg"
-  },
-  {
-    id: 2,
-    name: "Jane Smith",
-    position: "Designer",
-    image: "member2.jpg"
-  },
-  {
-    id: 3,
-    name: "Mark Johnson",
-    position: "Manager",
-    image: "member3.jpg"
-  },
-  {
-    id: 4,
-    name: "Emily Brown",
-    position: "Marketing",
-    image: "member4.jpg"
-  },
-  {
-    id: 5,
-    name: "Michael Clark",
-    position: "Engineer",
-    image: "member5.jpg"
-  },
-  {
-    id: 6,
-    name: "Sarah Wilson",
-    position: "Analyst",
-    image: "member6.jpg"
-  },
-];
+import ban1 from "../assets//Images/banner1.jpg"
+import ban2 from "../assets//Images/banner2.jpg"
+import ban3 from "../assets//Images/banner3.jpg"
 
-const Testimonials = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+import Carousel from 'react-bootstrap/Carousel';
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide(prevSlide => (prevSlide + 1) % members.length);
-    }, 5000); // Change slide duration (milliseconds)
-
-    return () => clearInterval(interval);
-  }, []);
-
-  const nextSlide = () => {
-    setCurrentSlide(prevSlide => (prevSlide + 1) % members.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide(prevSlide => (prevSlide - 1 + members.length) % members.length);
-  };
+function Testimonial() {
+  const [value, setValue] = React.useState(4);
 
   return (
-    <div className="slider">
-      <button className="arrow left" onClick={prevSlide}><BsArrowLeft /></button>
-      <div className="slides-container">
-        <div className="slides" style={{ transform: `translateX(-${currentSlide * 33.33}%)` }}>
-          {members.map((member, index) => (
-            <div className="slide" key={member.id}>
-              <img src={member.image} alt={member.name} className="slide-image" />
-              <div className="slide-details">
-                <p className="slide-name">{member.name}</p>
-                <p className="slide-position">{member.position}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-      <button className="arrow right" onClick={nextSlide}><BsArrowRight /></button>
-    </div>
-  );
-};
+  <Box
+  sx={{
+    '& > legend': { mt: 4 },
+  }}
+>
+  <h1 className='test-h1'>Cutomer Testimonial</h1>
+    <Carousel data-bs-theme="dark" className='caro'>
+      <Carousel.Item>
+        <img
+          className="d-img"
+          src={ban1}
+          alt="First slide"
+        />
+           <h5>First slide label</h5>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+<Rating
+name="simple-controlled"
+value={value}
+onChange={(event, newValue) => {
+  setValue(newValue);
+}}
+/>
+        <Carousel.Caption>
+       
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-img"
+          src={ban2}
+          alt="Second slide"
+        />
+               <h5>Second slide label</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+<Rating
+name="simple-controlled"
+value={value}
+onChange={(event, newValue) => {
+  setValue(newValue);
+}}
+/>
+        <Carousel.Caption>
+   
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-img"
+          src={ban3}
+          alt="Third slide"
+        />
 
-export default Testimonials;
+<h5>Third slide label</h5>
+          <p>
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+          </p>
+<Rating
+name="simple-controlled"
+value={value}
+onChange={(event, newValue) => {
+  setValue(newValue);
+}}
+/>
+        <Carousel.Caption>
+       
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
+</Box>
+  );
+}
+
+export default Testimonial;
+
+
+
+
+
+

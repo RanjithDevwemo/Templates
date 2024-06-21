@@ -1,11 +1,24 @@
+
 .scroll{
+
             display: flex;
-            width: 100%;
+            max-width:80%;
         align-items: center;
         justify-content: space-evenly;
-    
+
+   
+
         flex-wrap: wrap;
 
+}
+.orgin{
+    
+}
+.main{
+    display: inline;
+background: radial-gradient(circle at 0.7% 2.7%,rgba(115,46,209,255) 0%, rgba(33,16,77,255));
+
+color: white;
 }
 
 .counting{
@@ -16,7 +29,6 @@
     width: 100%;
 align-items: center;
 justify-content: space-evenly;
-
 flex-wrap: wrap;
 }
 .temp,.cont{

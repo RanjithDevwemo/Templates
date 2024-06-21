@@ -25,11 +25,12 @@ export default function FlyerHome() {
   return (
     <div className='flyerhome-main'>
         <div className="flyerhome-sec1">
-        <p>INNOVATIVE SOFTWARE SOLUTIONS</p>
-      <h1>We Empower businesses <span><img src={img1} alt="banner-half-circle" /></span></h1>
-      <div className='fade-h'><span className='fade-fix'><img src={img2} alt="banner-title-icon" className='banner-title-icon'/>with</span >
-       <span className={fade ? "fade-in" : "fade-out"}> {texts[currentIndex]}</span> </div> 
-       <button className='flyer-btn'>ContactUs !</button>
+        <p className='flyer-p1'>INNOVATIVE SOFTWARE SOLUTIONS</p>
+      <h1 className='fade-h'>We Empower businesses <span><img src={img1} alt="banner-half-circle" /></span></h1>
+      <div className='fade-h1 fade-h'><span className='attach'>
+  <span className='fade-fix'><img src={img2} alt="banner-title-icon" className='banner-title-icon'/> With</span >
+       <span className={fade ? "fade-in" : "fade-out"}> {texts[currentIndex]}</span></span> </div> 
+       <button className='flyer-btn'>Contact Us !</button>
      
     </div>
 

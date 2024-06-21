@@ -1,132 +1,125 @@
-import React from 'react';
-import {
-  MDBContainer,
-  MDBCol,
-  MDBNavbar,
-  MDBNavbarNav,
-  MDBNavbarItem,
-  MDBNavbarLink,
-  MDBDropdown,
-  MDBDropdownToggle,
-  MDBDropdownMenu,
-  MDBListGroup,
-  MDBListGroupItem,
-  MDBRow,
-} from 'mdb-react-ui-kit';
+// import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
 import "../Css/Megamenu.css"
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import Offcanvas from 'react-bootstrap/Offcanvas';
 import { Link } from 'react-router-dom';
 
-export default function Mega() {
+import { Row ,Col} from 'react-bootstrap';
+export default function Megamenu() {
   return (
-    <div className="main-con">
-          <MDBNavbar expand='lg'  className='main'>
-      <MDBContainer fluid>
-        <MDBNavbarNav className='me-auto ps-lg-0' style={{ paddingLeft: '0.15rem' }}>
-          <MDBNavbarItem>
-            <MDBNavbarLink active aria-current='page' href='#'>
-              Regular link
-            </MDBNavbarLink>
-          </MDBNavbarItem>
+    <div className=''>
+      {[ 'xl'].map((expand) => (
+        <Navbar key={expand} expand={expand} className="bg-body-tertiary mb-3" className='nav'>
+          <Container fluid className='navbar'>
+            <Navbar.Brand href="#">Navbar Offcanvas</Navbar.Brand>
+            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
+            <Navbar.Offcanvas
+              id={`offcanvasNavbar-expand-${expand}`}
+              aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
+              placement="end"
+            >
+              <Offcanvas.Header closeButton>
+                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
+                  Offcanvas
+                </Offcanvas.Title>
+              </Offcanvas.Header>
+              <Offcanvas.Body>
+                <Nav className="justify-content-end flex-grow-1 pe-3">
+                  <Nav.Link href="#action1">
+                  
+                  <Link to="/" className='li' >Home</Link></Nav.Link>
+                  <Nav.Link href="#action2"><Link to="/about" className='li' >About</Link></Nav.Link>
+                  <Nav.Link href="#action2">
+                  <Link to="/service" className='li' >Services</Link>
+                    </Nav.Link>
+                  <Nav.Link href="#action2">
+                  <Link to="/contact" className='li' > Contact Us</Link>
+                   </Nav.Link>
+                  
 
-          <MDBNavbarItem className='position-static'>
-            <MDBDropdown className='container'>
-              <MDBDropdownToggle tag='a' className='Mega-menu-box'>
-                Mega menu
-              </MDBDropdownToggle>
-              <MDBDropdownMenu
-                className='drop-down' 
-                style={{
-                  borderTopLeftRadius: '0',
-                  borderTopRightRadius: '0',
-                }} 
-              >
-                <MDBContainer className='c'>
-                  <MDBRow className='my-4 row'>
-                    <MDBCol md='6' lg='3' className='mb-3 mb-lg-0'>
-                      <MDBListGroup flush>
-                        <MDBListGroupItem tag='a' href='#' action>
-                        <Link to="/">  Lorem ipsum </Link>
-                        </MDBListGroupItem>
-                        <MDBListGroupItem tag='a' href='#' action>
-                          Dolor sit
-                        </MDBListGroupItem>
-                        <MDBListGroupItem tag='a' href='#' action>
-                          Amet consectetur
-                        </MDBListGroupItem>
-                        <MDBListGroupItem tag='a' href='#' action>
-                          Cras justo odio
-                        </MDBListGroupItem>
-                        <MDBListGroupItem tag='a' href='#' action>
-                          Adipisicing elit
-                        </MDBListGroupItem>
-                      </MDBListGroup>
-                    </MDBCol>
-                    <MDBCol md='6' lg='3' className='mb-3 mb-lg-0'>
-                      <MDBListGroup flush>
-                        <MDBListGroupItem tag='a' href='#' action>
-                          Explicabo voluptas
-                        </MDBListGroupItem>
-                        <MDBListGroupItem tag='a' href='#' action>
-                          Perspiciatis quo
-                        </MDBListGroupItem>
-                        <MDBListGroupItem tag='a' href='#' action>
-                          Cras justo odio
-                        </MDBListGroupItem>
-                        <MDBListGroupItem tag='a' href='#' action>
-                          Laudantium maiores
-                        </MDBListGroupItem>
-                        <MDBListGroupItem tag='a' href='#' action>
-                          Provident dolor
-                        </MDBListGroupItem>
-                      </MDBListGroup>
-                    </MDBCol>
-                    <MDBCol md='6' lg='3' className='mb-3 mb-md-0'>
-                      <MDBListGroup flush>
-                        <MDBListGroupItem tag='a' href='#' action>
-                          Iste quaerato
-                        </MDBListGroupItem>
-                        <MDBListGroupItem tag='a' href='#' action>
-                          Cras justo odio
-                        </MDBListGroupItem>
-                        <MDBListGroupItem tag='a' href='#' action>
-                          Est iure
-                        </MDBListGroupItem>
-                        <MDBListGroupItem tag='a' href='#' action>
-                          Praesentium
-                        </MDBListGroupItem>
-                        <MDBListGroupItem tag='a' href='#' action>
-                          Laboriosam
-                        </MDBListGroupItem>
-                      </MDBListGroup>
-                    </MDBCol>
-                    <MDBCol md='6' lg='3'>
-                      <MDBListGroup flush>
-                        <MDBListGroupItem tag='a' href='#' action>
-                          Cras justo odio
-                        </MDBListGroupItem>
-                        <MDBListGroupItem tag='a' href='#' action>
-                          Saepe
-                        </MDBListGroupItem>
-                        <MDBListGroupItem tag='a' href='#' action>
-                          Vel alias
-                        </MDBListGroupItem>
-                        <MDBListGroupItem tag='a' href='#' action>
-                          Sunt doloribus
-                        </MDBListGroupItem>
-                        <MDBListGroupItem tag='a' href='#' action>
-                          Cum dolores
-                        </MDBListGroupItem>
-                      </MDBListGroup>
-                    </MDBCol>
-                  </MDBRow>
-                </MDBContainer>
-              </MDBDropdownMenu>
-            </MDBDropdown>
-          </MDBNavbarItem>
-        </MDBNavbarNav>
-      </MDBContainer>
-    </MDBNavbar>
+
+                   <Container className='dropdown-content'>
+
+                  <NavDropdown
+                    title="Dropdown1"
+                    id={`offcanvasNavbarDropdown-expand-${expand}`}
+                    className='header'
+                  >
+
+
+                    <NavDropdown.Item href="#action3" className='action'>Action</NavDropdown.Item>
+                 
+                    <Row className='row'>
+                    
+
+                      <Col className='column'>
+
+                      <div><ul>
+            <li>Row1</li>
+            <li>Tamil</li>
+            <li>ldad</li>
+            <li>dasasd</li>
+            </ul></div>
+            <div><ul>
+            <li>Row2</li>
+            <li>Tamil</li>
+            <li>ldad</li>
+            <li>dasasd</li>
+            </ul></div>
+            <div><ul>
+            <li>Row3</li>
+            <li>Tamil</li>
+            <li>ldad</li>
+            <li>dasasd</li>
+            </ul></div>
+                      </Col>
+
+                      <Col className='column'>
+
+                      <div><ul>
+            <li>Row1</li>
+            <li>Tamil</li>
+            <li>ldad</li>
+            <li>dasasd</li>
+            </ul></div>
+            <div><ul>
+            <li>Row2</li>
+            <li>Tamil</li>
+            <li>ldad</li>
+            <li>dasasd</li>
+            </ul></div>
+            <div><ul>
+            <li>Row3</li>
+            <li>Tamil</li>
+            <li>ldad</li>
+            <li>dasasd</li>
+            </ul></div>
+                      </Col>
+
+                                        </Row>
+                    <NavDropdown.Item href="#action4">
+                      Another action
+                    </NavDropdown.Item>
+                    <NavDropdown.Divider />
+                    <NavDropdown.Item href="#action5">
+                      Something else here
+                    </NavDropdown.Item>
+
+              
+                  </NavDropdown>
+                  </Container>
+
+
+                </Nav>
+                
+              </Offcanvas.Body>
+            </Navbar.Offcanvas>
+          </Container>
+        </Navbar>
+      ))}
     </div>
-
   );
 }
